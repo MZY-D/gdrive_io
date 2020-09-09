@@ -21,7 +21,7 @@ pip install git+https://github.com/mi-ta-d/gdrive_io
 ```
 
 ```python
-import gdrive_io
+from gdrive_io import gdrive_io
 
 drive = gdrive_io.DriveIO(env="local", "xxx")  # Your credentials path for GoogleDrive (https://pythonhosted.org/PyDrive/quickstart.html)
 drive_dir_id = "aaaaa"  # Id of the Google Drive directory where your CSV is.
@@ -32,7 +32,7 @@ df = drive.driveCsv2df(drive_dir_id,"file_name.csv")
 
 ```python
 !pip install git+https://github.com/mi-ta-d/gdrive_io
-import gdrive_io
+from gdrive_io import gdrive_io
 
 drive = gdrive_io.DriveIO(env="colab")
 drive_dir_id = "aaaaa"  # Id of the Google Drive directory where your CSV is.
