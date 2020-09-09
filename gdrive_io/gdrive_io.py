@@ -49,7 +49,7 @@ class DriveIO:
         Return :
             out_df : pandas DataFrame
         """
-        file_dict = self.drive_dict(folder_id)
+        file_dict = self.driveDict(folder_id)
         out_df = pd.DataFrame()
         for f in fnmatch.filter(file_dict.keys(), target_file):
             print(f)
@@ -89,7 +89,7 @@ class DriveIO:
         Return :
             out_df : pandas DataFrame
         """
-        file_dict = self.drive_dict(folder_id)
+        file_dict = self.driveDict(folder_id)
         out_df = pd.DataFrame()
         for f in fnmatch.filter(file_dict.keys(), target_file):
             print(f)
@@ -128,7 +128,7 @@ class DriveIO:
         Return :
             out_df : pandas DataFrame
         """
-        file_dict = self.drive_dict(folder_id)
+        file_dict = self.driveDict(folder_id)
         out_df = pd.DataFrame()
         for f in fnmatch.filter(file_dict.keys(), target_file):
             print(f)
@@ -167,7 +167,7 @@ class DriveIO:
         Return :
             out_df : pandas DataFrame
         """
-        file_dict = self.drive_dict(folder_id)
+        file_dict = self.driveDict(folder_id)
         out_df = pd.DataFrame()
         for f in fnmatch.filter(file_dict.keys(), target_file):
             print(f, " > ", sheet)
@@ -200,7 +200,7 @@ class DriveIO:
         Return :
             None
         """
-        file_dict = self.drive_dict(folder_id)
+        file_dict = self.driveDict(folder_id)
         if file_name in file_dict.keys():
             exist_file = self.drive.CreateFile({'id': file_dict[file_name]})
         else:
@@ -232,7 +232,7 @@ class DriveIO:
             df.to_excel("_tempDiriveIO_" + file_name, index=index_bool)
         else:
             pass
-        file_dict = self.drive_dict(folder_id)
+        file_dict = self.driveDict(folder_id)
         if file_name in file_dict.keys():
             exist_file = self.drive.CreateFile({'id': file_dict[file_name]})
         else:
@@ -280,7 +280,7 @@ class DriveIO:
             text : str
                 The text string.
         """
-        file_dict = self.drive_dict(folder_id)
+        file_dict = self.driveDict(folder_id)
         exist_file = self.drive.CreateFile({'id': file_dict[target_file]})
         text = exist_file.GetContentString()
         return text
