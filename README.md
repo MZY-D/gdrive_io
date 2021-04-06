@@ -17,7 +17,7 @@ Easy to input files on GoogleDrive as pandas DataFrame fortmat and output(upload
 ### Local Jupyter notebook
 
 ```
-pip install git+https://github.com/mi-ta-d/gdrive_io
+pip install git+https://github.com/MZY-D/gdrive_io
 ```
 
 ```python
@@ -31,7 +31,7 @@ df = drive.driveCsv2df(drive_dir_id,"file_name.csv")
 ### Google Colaboratory
 
 ```python
-!pip install git+https://github.com/mi-ta-d/gdrive_io
+!pip install git+https://github.com/MZY-D/gdrive_io
 from gdrive_io import gdrive_io
 
 drive = gdrive_io.DriveIO(env="colab")
